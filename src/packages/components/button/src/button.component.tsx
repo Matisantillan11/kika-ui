@@ -1,9 +1,9 @@
 import { SButton, SButtonIcon } from "./button.style"
-
 import { IButtonProps } from "../interfaces/button.interface"
 import React from "react"
 import classnames from "classnames"
 import useGetTheme from "../../../../hooks/useGetTheme"
+import { ThemeProvider } from "styled-components"
 
 export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
   const {
@@ -15,34 +15,25 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
     disabled,
     className,
     singleIcon,
-    singleIconColor,
     size,
     inGroup,
-    rightIconColor,
-    leftIconColor,
-    rightIconStroke,
-    leftIconStroke,
-    sizeIcon,
     count,
     smallLeftIcon,
     loading,
-    loadingLeft,
-    loadingRight,
     finished,
-    finishedLeft,
-    finishedRight,
     styles,
     downloading,
     linkColor,
   } = props
-  const {theme} = useGetTheme()
+  const { theme } = useGetTheme();
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
+    <ThemeProvider theme={theme}>
       {!singleIcon ? (
         <SButton
           {...styles}
-          colorTheme={theme}
+          
           data-test-id="custom-button"
           className={`${classnames(className || "", type || "", size || "", {
             "in-group": inGroup,
@@ -83,7 +74,6 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
         </SButton>
       ) : (
         <SButtonIcon
-        colorTheme={theme}
           className={`${classnames(className || "", type || "", {
             disabled: !!disabled,
           })} singleIcon`}
@@ -106,6 +96,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
           </div>
         </SButtonIcon>
       )}
+      </ThemeProvider>
     </>
   )
 }

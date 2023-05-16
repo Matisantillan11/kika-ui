@@ -3,7 +3,7 @@ import React, { ReactNode } from "react"
 import { GlobalStyles } from "../src/packages/components/globalStyles/globalStyle.component"
 import { ThemeProvider } from "styled-components"
 import useGetTheme from "../src/hooks/useGetTheme"
-
+import theme from "../src/constants/theme"
 
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 
 export const withGlobalStyles = (storyFn: () => ReactNode) => {
   // const {isDarkMode} = useDarkMode()
-  const {theme} = useGetTheme()
+  //const {theme} = useGetTheme()
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

@@ -30,7 +30,7 @@ export const SButton = styled.div<IButtonStyles>`
     bottom: 0;
     height: 5px;
     border-radius: 4px;
-    background-color: ${(props) => props.colorTheme.blue.blue400};
+    background-color: ${(props) => props.theme.blue.blue400};
   }
   .button-text {
     position: relative;
@@ -112,30 +112,30 @@ export const SButton = styled.div<IButtonStyles>`
   }
   &.button-component,
   &.primary {
-    background-color: ${(props) => props.colorTheme.blue.blue700};
-    color: ${(props) => props.colorTheme.primary.white};
+    background-color: ${({ theme }) => theme.blue.blue700};
+    color: ${(props) => props?.theme?.primary?.white};
     text-transform: uppercase;
     &:hover {
-      background-color: ${(props) => props.colorTheme.blue.blue500};
+      background-color: ${(props) => props?.theme?.blue?.blue500};
     }
     &:active,
     &:focus {
-      background-color: ${(props) => props.colorTheme.blue.blue800};
+      background-color: ${(props) => props?.theme?.blue?.blue800};
       /* box-shadow: 0px 0px 10px rgba(0, 47, 167, 0.5); */
     }
     svg {
       path {
-        stroke: ${(props) => props.colorTheme.primary.white};
+        stroke: ${(props) => props?.theme?.primary?.white};
       }
     }
     &.primary-disabled,
     &.disabled {
-      background-color: ${(props) => props.colorTheme.grey.grey200};
+      background-color: ${(props) => props?.theme?.grey?.grey200};
       cursor: default;
-      color: ${(props) => props.colorTheme.grey.grey400};
+      color: ${(props) => props?.theme?.grey?.grey400};
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.grey.grey400};
+          stroke: ${(props) => props?.theme?.grey?.grey400};
         }
       }
       &:active,
@@ -149,10 +149,10 @@ export const SButton = styled.div<IButtonStyles>`
     min-width: ${(props) => (props?.default?.width ? props?.default?.width : "74px")};
     min-height: 74px;
     border-radius: 50%;
-    background-color: ${(props) => props.colorTheme.blue.blue50};
+    background-color: ${(props) => props?.theme?.blue?.blue50};
 
     .button-icon {
-      background-color: ${(props) => props.colorTheme.blue.blue100};
+      background-color: ${(props) => props?.theme?.blue?.blue100};
       width: 60px;
       height: 60px;
       border-radius: 50%;
@@ -160,33 +160,33 @@ export const SButton = styled.div<IButtonStyles>`
     }
     svg {
       path {
-        stroke: ${(props) => props.colorTheme.blue.blue500};
+        stroke: ${(props) => props?.theme?.blue?.blue500};
       }
     }
     &:hover {
-      background-color: ${(props) => props.colorTheme.blue.blue100};
+      background-color: ${(props) => props?.theme?.blue?.blue100};
       .button-icon {
-        background-color: ${(props) => props.colorTheme.blue.blue200};
+        background-color: ${(props) => props?.theme?.blue?.blue200};
       }
     }
     &:active,
     &:focus {
-      background-color: ${(props) => props.colorTheme.blue.blue200};
+      background-color: ${(props) => props?.theme?.blue?.blue200};
       box-shadow: 0px 0px 10px rgba(77, 127, 255, 0.3);
       .button-icon {
-        background-color: ${(props) => props.colorTheme.blue.blue300};
+        background-color: ${(props) => props?.theme?.blue?.blue300};
       }
     }
     &.disabled {
       box-shadow: none;
       cursor: default;
-      background-color: ${(props) => props.colorTheme.grey.grey200};
+      background-color: ${(props) => props?.theme?.grey?.grey200};
       .button-icon {
-        background-color: ${(props) => props.colorTheme.grey.grey300};
+        background-color: ${(props) => props?.theme?.grey?.grey300};
       }
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.grey.grey500};
+          stroke: ${(props) => props?.theme?.grey?.grey500};
         }
       }
     }
@@ -194,44 +194,44 @@ export const SButton = styled.div<IButtonStyles>`
 
   &.outlined {
     background-color: unset;
-    border: 1px solid ${(props) => props.colorTheme.blue.blue700};
-    color: ${(props) => props.colorTheme.blue.blue700};
+    border: 1px solid ${(props) => props?.theme?.blue?.blue700};
+    color: ${(props) => props?.theme?.blue?.blue700};
     text-transform: uppercase;
     .check-component {
-      border-color: ${(props) => props.colorTheme.blue.blue700};
+      border-color: ${(props) => props?.theme?.blue?.blue700};
     }
     svg {
       path {
-        stroke: ${(props) => props.colorTheme.blue.blue700};
+        stroke: ${(props) => props?.theme?.blue?.blue700};
       }
     }
     &:hover {
-      color: ${(props) => props.colorTheme.blue.blue400};
-      border-color: ${(props) => props.colorTheme.blue.blue400};
+      color: ${(props) => props?.theme?.blue?.blue400};
+      border-color: ${(props) => props?.theme?.blue?.blue400};
       background-color: unset;
       .check-component {
-        border-color: ${(props) => props.colorTheme.blue.blue400};
+        border-color: ${(props) => props?.theme?.blue?.blue400};
       }
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.blue.blue400};
+          stroke: ${(props) => props?.theme?.blue?.blue400};
         }
       }
     }
     &:active,
     &:focus {
-      border: 1px solid ${(props) => props.colorTheme.blue.blue700};
-      color: ${(props) => props.colorTheme.blue.blue700};
+      border: 1px solid ${(props) => props?.theme?.blue?.blue700};
+      color: ${(props) => props?.theme?.blue?.blue700};
     }
     &.outlined-disabled {
       cursor: default;
       background-color: transparent;
-      border-color: ${(props) => props.colorTheme.grey.grey400};
-      /* background-color: ${(props) => props.colorTheme.primary.baseWhite}; */
-      color: ${(props) => props.colorTheme.grey.grey400};
+      border-color: ${(props) => props?.theme?.grey?.grey400};
+      /* background-color: ${(props) => props?.theme?.primary?.baseWhite}; */
+      color: ${(props) => props?.theme?.grey?.grey400};
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.grey.grey400};
+          stroke: ${(props) => props?.theme?.grey?.grey400};
         }
       }
       &:active,
@@ -242,54 +242,54 @@ export const SButton = styled.div<IButtonStyles>`
   }
 
   &.secondary {
-    background-color: ${(props) => props.colorTheme.primary.baseWhite};
-    color: ${(props) => props.colorTheme.blue.blue700};
+    background-color: ${(props) => props?.theme?.primary?.baseWhite};
+    color: ${(props) => props?.theme?.blue?.blue700};
 
     &:hover {
-      background-color: ${(props) => props.colorTheme.grey.grey300};
-      color: ${(props) => props.colorTheme.blue.blue700};
+      background-color: ${(props) => props?.theme?.grey?.grey300};
+      color: ${(props) => props?.theme?.blue?.blue700};
     }
   }
 
   &.outlined-secondary {
     background-color: unset;
-    border: 1px solid ${(props) => props.colorTheme.primary.baseWhite};
-    color: ${(props) => props.colorTheme.primary.baseWhite};
+    border: 1px solid ${(props) => props?.theme?.primary?.baseWhite};
+    color: ${(props) => props?.theme?.primary?.baseWhite};
     text-transform: uppercase;
     .check-component {
-      border-color: ${(props) => props.colorTheme.primary.baseWhite};
+      border-color: ${(props) => props?.theme?.primary?.baseWhite};
     }
     svg {
       path {
-        stroke: ${(props) => props.colorTheme.primary.baseWhite};
+        stroke: ${(props) => props?.theme?.primary?.baseWhite};
       }
     }
     &:hover {
-      color: ${(props) => props.colorTheme.blue.blue700};
-      background-color: ${(props) => props.colorTheme.primary.baseWhite};
+      color: ${(props) => props?.theme?.blue?.blue700};
+      background-color: ${(props) => props?.theme?.primary?.baseWhite};
       .check-component {
-        border-color: ${(props) => props.colorTheme.blue.blue700};
+        border-color: ${(props) => props?.theme?.blue?.blue700};
       }
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.blue.blue700};
+          stroke: ${(props) => props?.theme?.blue?.blue700};
         }
       }
     }
     /* &:active,
     &:focus {
-      border: 1px solid ${(props) => props.colorTheme.blue.blue700};
-      color: ${(props) => props.colorTheme.blue.blue700};
+      border: 1px solid ${(props) => props?.theme?.blue?.blue700};
+      color: ${(props) => props?.theme?.blue?.blue700};
     } */
     &.outlined-secondary-disabled {
       opacity: 0.5;
       cursor: default;
-      background-color: ${(props) => props.colorTheme.primary.baseWhite};
-      border: 1px solid ${(props) => props.colorTheme.primary.baseWhite};
-      color: ${(props) => props.colorTheme.blue.blue700};
+      background-color: ${(props) => props?.theme?.primary?.baseWhite};
+      border: 1px solid ${(props) => props?.theme?.primary?.baseWhite};
+      color: ${(props) => props?.theme?.blue?.blue700};
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.blue.blue700};
+          stroke: ${(props) => props?.theme?.blue?.blue700};
         }
       }
       &:active,
@@ -300,12 +300,12 @@ export const SButton = styled.div<IButtonStyles>`
   }
 
   &.secondary {
-    background-color: ${(props) => props.colorTheme.primary.baseWhite};
-    color: ${(props) => props.colorTheme.blue.blue700};
+    background-color: ${(props) => props?.theme?.primary?.baseWhite};
+    color: ${(props) => props?.theme?.blue?.blue700};
 
     &:hover {
-      background-color: ${(props) => props.colorTheme.grey.grey300};
-      color: ${(props) => props.colorTheme.blue.blue700};
+      background-color: ${(props) => props?.theme?.grey?.grey300};
+      color: ${(props) => props?.theme?.blue?.blue700};
     }
   }
 
@@ -314,7 +314,7 @@ export const SButton = styled.div<IButtonStyles>`
     padding: 0;
     background-color: unset;
     width: fit-content;
-    color: ${({ linkColor }) => (linkColor ? linkColor.default : (props) => props.colorTheme.blue.blue400)};
+    color: ${({ linkColor }) => (linkColor ? linkColor.default : (props) => props?.theme?.blue?.blue400)};
     text-transform: uppercase;
     transition: none;
     p {
@@ -322,40 +322,40 @@ export const SButton = styled.div<IButtonStyles>`
     }
     svg {
       path {
-        stroke: ${({ linkColor }) => (linkColor ? linkColor.default : (props) => props.colorTheme.blue.blue400)};
+        stroke: ${({ linkColor }) => (linkColor ? linkColor.default : (props) => props?.theme?.blue?.blue400)};
       }
     }
     &:hover {
       background-color: unset;
-      color: ${({ linkColor }) => (linkColor ? linkColor.hover : (props) => props.colorTheme.blue.blue400)};
+      color: ${({ linkColor }) => (linkColor ? linkColor.hover : (props) => props?.theme?.blue?.blue400)};
       /* font-style: italic; */
       text-decoration: underline;
       svg {
         path {
-          stroke: ${({ linkColor }) => (linkColor ? linkColor.hover : (props) => props.colorTheme.blue.blue400)};
+          stroke: ${({ linkColor }) => (linkColor ? linkColor.hover : (props) => props?.theme?.blue?.blue400)};
         }
       }
     }
     &:active,
     &:focus {
-      color: ${({ linkColor }) => (linkColor ? linkColor.active : (props) => props.colorTheme.blue.blue400)};
+      color: ${({ linkColor }) => (linkColor ? linkColor.active : (props) => props?.theme?.blue?.blue400)};
       font-style: normal;
       text-decoration: none;
       svg {
         path {
-          stroke: ${({ linkColor }) => (linkColor ? linkColor.active : (props) => props.colorTheme.blue.blue400)};
+          stroke: ${({ linkColor }) => (linkColor ? linkColor.active : (props) => props?.theme?.blue?.blue400)};
         }
       }
     }
     &.link-disabled {
       background-color: inherit;
-      color: ${(props) => props.colorTheme.grey.grey400};
+      color: ${(props) => props?.theme?.grey?.grey400};
       font-style: normal;
       cursor: default;
       text-decoration: none;
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.grey.grey400};
+          stroke: ${(props) => props?.theme?.grey?.grey400};
         }
       }
     }
@@ -364,23 +364,23 @@ export const SButton = styled.div<IButtonStyles>`
   &.pills {
     height: 35px;
     background-color: unset;
-    border: 1px solid ${(props) => props.colorTheme.grey.grey300};
-    color: ${(props) => props.colorTheme.grey.grey400};
+    border: 1px solid ${(props) => props?.theme?.grey?.grey300};
+    color: ${(props) => props?.theme?.grey?.grey400};
     border-radius: 50px;
     padding: 10px 22px;
     text-transform: capitalize;
     text-align: start;
     &:hover {
       cursor: pointer;
-      border: 1px solid ${(props) => props.colorTheme.blue.blue400};
-      background-color: ${(props) => props.colorTheme.blue.blue50};
+      border: 1px solid ${(props) => props?.theme?.blue?.blue400};
+      background-color: ${(props) => props?.theme?.blue?.blue50};
     }
 
     &-selected {
       height: 35px;
-      background-color: ${(props) => props.colorTheme.blue.blue50};
-      border: 1px solid ${(props) => props.colorTheme.blue.blue500};
-      color: ${(props) => props.colorTheme.blue.blue500};
+      background-color: ${(props) => props?.theme?.blue?.blue50};
+      border: 1px solid ${(props) => props?.theme?.blue?.blue500};
+      color: ${(props) => props?.theme?.blue?.blue500};
       border-radius: 50px;
       padding: 10px 22px;
       text-transform: capitalize;
@@ -392,12 +392,12 @@ export const SButton = styled.div<IButtonStyles>`
 
     &.pills-disabled {
       cursor: default;
-      border: 1px solid ${(props) => props.colorTheme.grey.grey300};
-      color: ${(props) => props.colorTheme.grey.grey400};
+      border: 1px solid ${(props) => props?.theme?.grey?.grey300};
+      color: ${(props) => props?.theme?.grey?.grey400};
       &:hover {
-        background-color: ${(props) => props.colorTheme.grey.grey200};
-        border: 1px solid ${(props) => props.colorTheme.grey.grey300};
-        color: ${(props) => props.colorTheme.grey.grey400};
+        background-color: ${(props) => props?.theme?.grey?.grey200};
+        border: 1px solid ${(props) => props?.theme?.grey?.grey300};
+        color: ${(props) => props?.theme?.grey?.grey400};
       }
     }
   }
@@ -407,14 +407,14 @@ export const SButton = styled.div<IButtonStyles>`
     width: fit-content;
     padding: 15px;
     border-radius: 0;
-    color: ${(props) => props.colorTheme.grey.grey400};
-    border-bottom: 1px solid ${(props) => props.colorTheme.grey.grey300};
+    color: ${(props) => props?.theme?.grey?.grey400};
+    border-bottom: 1px solid ${(props) => props?.theme?.grey?.grey300};
     &:hover {
       background-color: unset;
     }
     svg {
       path {
-        stroke: ${(props) => props.colorTheme.grey.grey400};
+        stroke: ${(props) => props?.theme?.grey?.grey400};
       }
     }
 
@@ -422,14 +422,14 @@ export const SButton = styled.div<IButtonStyles>`
       background-color: unset;
       padding: 15px;
       border-radius: 0;
-      color: ${(props) => props.colorTheme.blue.blue400};
-      border-bottom: 2px solid ${(props) => props.colorTheme.blue.blue400};
+      color: ${(props) => props?.theme?.blue?.blue400};
+      border-bottom: 2px solid ${(props) => props?.theme?.blue?.blue400};
       &:hover {
         background-color: unset;
       }
       svg {
         path {
-          stroke: ${(props) => props.colorTheme.blue.blue400};
+          stroke: ${(props) => props?.theme?.blue?.blue400};
         }
       }
     }

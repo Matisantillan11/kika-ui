@@ -1,6 +1,4 @@
-import { IGlobalUi } from "../../../../interfaces/global.interface"
-
-export interface IButtonProps extends IGlobalUi{
+export interface IButtonProps{
   onClick: (ev?: unknown) => void
   text?: string
   width?: string
@@ -9,38 +7,26 @@ export interface IButtonProps extends IGlobalUi{
   className?: string
   disabled?: boolean
   loading?: boolean
-  loadingLeft?: boolean
-  loadingRight?: boolean
   type?:
     | "primary"
     | "secondary"
-    | "round"
     | "outlined"
-    | "outlined-secondary"
     | "link"
     | "tabs"
     | "tabs-selected"
     | "pills"
     | "pills-selected"
   singleIcon?: string
-  singleIconColor?: string
   leftIcon?: JSX.Element
   rightIcon?: JSX.Element
-  rightIconColor?: string
-  leftIconColor?: string
-  rightIconStroke?: string
-  leftIconStroke?: string
-  sizeIcon?: string
   count?: number
   smallLeftIcon?: string
   finished?: boolean
-  finishedLeft?: boolean
-  finishedRight?: boolean
   styles?: IButtonStyles
   downloading?: number;
   linkColor?: ILinkColor;
 }
-export interface IButtonStyles extends IGlobalUi {
+export interface IButtonStyles {
   default?: IStylesOptoins
   hover?: IStylesOptoins
   pressed?: IStylesOptoins
