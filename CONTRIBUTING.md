@@ -1,4 +1,4 @@
-Thanks for showing interest to contribute to Chakra UI 🖤, you rock!
+Thanks for showing interest to contribute to Kika UI 🖤, you rock!
 
 Here's a few guidelines that should help you as you
 prepare your contribution.
