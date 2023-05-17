@@ -1,11 +1,11 @@
 import { SButton, SButtonIcon } from "./button.style"
 import { IButtonProps } from "../interfaces/button.interface"
-import React from "react"
 import classnames from "classnames"
 import useGetTheme from "../../../../hooks/useGetTheme"
 import { ThemeProvider } from "styled-components"
+import { FC } from "react"
 
-export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
+export const Button: FC<IButtonProps> = (props: IButtonProps) => {
   const {
     text,
     type,
@@ -27,7 +27,6 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
   } = props
   const { theme } = useGetTheme();
   return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
     <ThemeProvider theme={theme}>
       {!singleIcon ? (

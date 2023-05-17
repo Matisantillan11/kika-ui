@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 export const useDarkMode = () => {
   const LOCAL_STORAGE_ITEM = "isDarkMode"
