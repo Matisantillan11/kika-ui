@@ -20,6 +20,20 @@ cd kika-ui
 3. Setup all the dependencies and packages by running `yarn`. This
    command will install dependencies.
 
+## Development
+
+To improve our development process, we've set up tooling and systems. Chakra UI
+uses a monorepo structure and we treat each component as an independent package
+that can be consumed in isolation.
+
+### Tooling
+
+- [YARN](https://yarnpkg.com/) to manage packages and dependencies
+- [Storybook](https://storybook.js.org/) for rapid UI component development and
+  testing
+- [Testing Library](https://testing-library.com/) for testing components and
+  hooks
+
 ### Commands
 
 **`yarn `**: bootstraps the entire project, symlinks all dependencies for
@@ -29,7 +43,6 @@ cross-component development and builds all components.
 end with `.stories.tsx`.
 
 **`yarn build`**: run build for all component packages.
-
 
 ## Making a Pull Request?
 
@@ -75,4 +88,3 @@ https://www.conventionalcommits.org/ or check out the
 
 3. Make and commit your changes following the
    [commit convention](https://github.com/Matisantillan11/kika-ui/blob/main/CONTRIBUTING.md#commit-convention).
-  
