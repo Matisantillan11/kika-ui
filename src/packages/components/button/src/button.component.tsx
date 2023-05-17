@@ -26,7 +26,7 @@ export const Button: FC<IButtonProps> = (props: IButtonProps) => {
 		linkColor,
 	} = props
 	const { theme } = useGetTheme()
-	console.log({ theme })
+
 	return (
 		<>
 			<ThemeProvider theme={theme}>
